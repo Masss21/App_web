@@ -1,0 +1,67 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8fafc;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  color: white;
+  padding: 20px;
+}
+.actions button {
+  margin-left: 10px;
+  background: #38bdf8;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.hero {
+  text-align: center;
+  padding: 30px;
+}
+.galeri {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+.layanan {
+  width: 200px;
+}
+.layanan img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.form-antrian {
+  text-align: center;
+  margin: 30px;
+}
+.form-antrian input {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 300px;
+}
+.form-antrian button {
+  padding: 10px 20px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background: #e2e8f0;
+  padding: 20px;
+  margin-top: 40px;
+}

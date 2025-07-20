@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Beranda Bengkel</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Header -->
+    <header class="header">
+      <h1 class="logo">🏍️ Servis Motor</h1>
+      <div class="actions">
+        <button @click="scrollToForm">📋 Ambil Nomor Antrian</button>
+        <button @click="goToLogin">🔐 Login Admin</button>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h2>Selamat datang di Bengkel Modern!</h2>
+      <p>Kami melayani servis ringan hingga berat dengan profesional.</p>
+    </section>
+
+    <!-- Galeri -->
+    <section class="galeri">
+      <div class="layanan" v-for="item in galeri" :key="item.judul">
+        <img :src="item.gambar" />
+        <h3>{{ item.judul }}</h3>
+        <p>{{ item.deskripsi }}</p>
+      </div>
+    </section>
+
+    <!-- Form Antrian -->
+    <section ref="formSection" class="form-antrian">
+      <h2>Ambil Nomor Antrian</h2>
+      <input v-model="nama" placeholder="Nama" />
+      <input v-model="telepon" placeholder="Telepon" />
+      <button @click="submitAntrian">Kirim</button>
+      <p v-if="pesan">{{ pesan }}</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div>
+        <h3>About</h3>
+        <p>Kami adalah bengkel terpercaya sejak 2010. Mengutamakan kualitas, kecepatan, dan kejujuran.</p>
+      </div>
+      <div>
+        <h3>Alamat</h3>
+        <p>Jl. Mekar Jaya No. 99, Bandung</p>
+      </div>
+      <div>
+        <h3>Contact Us</h3>
+        <p>WhatsApp: 0812-3456-7890</p>
+        <p>Email: bengkel@example.com</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/home.js"></script>
+</body>
+</html>
